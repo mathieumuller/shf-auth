@@ -24,7 +24,6 @@
             "Shf\\AuthBundle" : ""
         }
     },
-    "target-dir" : "Shf/AuthBundle",
     "extra" : {
         "branch-alias" : {
             "dev-master" : "dev-master"

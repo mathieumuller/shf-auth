@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.login'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    {% block flashbag %}
+        {{ parent() }}
+    {% endblock %}
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Compte SHF</h2>
+            {{ 'welcome'|label|raw }}
+         </div>
+    </div>
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message|trans }}</div>
+    {% endif %}
+
+    <div class="row margin-top-lg">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-login text-center"><h4 class="panel-heading-title">Connexion à votre compte SHF</h4></div>
+                <div class="panel-body padding-top-0">
+
+                    <div class="margin-bottom text-center">
+                        <a class="btn btn-primary w100p" href="{{ cas_login_url}}&amp;service={{ url('login_check', {}) }}">{{ 'action.log_in'|trans }}</a>
+                        {# <a class="margin-top-sm small pull-right" href="{{ path('ask_new_pwd') }}">{{ 'user.forgot_my_password'|trans }}</a> #}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- _sign_|_in_ --> {# Used for AJAX: auto redirect when the user is disconnected #}
+{% endblock %}

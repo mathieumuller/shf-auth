@@ -1,0 +1,44 @@
+parameters:    
+    security.authentication_failure_handler.class: "AuthBundle\\Handler\\FailureHandler"
+    shf.auth.configurator.class: "AuthBundle\\Service\\Configurator"
+    shf.security_handler.class: "AuthBundle\\Service\\SecurityHandler"
+    shf.password_encoder.class: "AuthBundle\\Security\\Encoder\\SHFPasswordEncoder"
+    shf.user_provider.class: "AuthBundle\\Security\\User\\UserProvider"
+    shf.security.authentication_success_handler.class: "AuthBundle\\Handler\\AuthenticationSuccessHandler"
+
+services:
+    security.authentication_failure_handler:
+        class: "%security.authentication_failure_handler.class%"
+        arguments: ["@security.token_storage"]
+        public: false
+
+    shf.security_handler:
+        class: "%shf.security_handler.class%"
+        arguments:
+            - "@security.token_storage"
+            - "@router"
+            - "@security.encoder_factory"
+            - "@request_stack"
+            - "@event_dispatcher"
+            - "@shf.user_provider"
+
+    shf.password_encoder:
+        class: "%shf.password_encoder.class%"
+
+    shf.user_provider:
+        class: "%shf.user_provider.class%"
+        arguments: ["@service_container"]
+
+    shf.security.authentication_success_handler:
+        class: "%shf.security.authentication_success_handler.class%"
+        public: false
+        arguments:
+            - "@router"
+            - "@security.token_storage"
+            - "@event_dispatcher"
+            - "@shf.user_provider"
+            - "@security.authorization_checker"
+            - "@shf.auth.configurator"
+
+    shf.auth.configurator:
+        class: "%shf.auth.configurator.class%"

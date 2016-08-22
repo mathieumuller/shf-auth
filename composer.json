@@ -17,7 +17,7 @@
         "MIT"
     ],
     "require" : {
-        "besimple/sso-auth-bundle": "@dev"
+        "besimple/sso-auth-bundle": "1.0.x-dev"
     },
     "autoload" : {
         "psr-4" : {

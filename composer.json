@@ -1,6 +1,15 @@
 {
-
-    
+    "name" : "shf/auth-bundle",
+    "description" : "Provides a shared authentication system for the SHF projects",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Mathieu Muller",
+        "email" : "mathieu.muller@axiocode.com"
+    },
+    {
+        "name" : "Benjamin Charbonnier",
+        "email" : "benjamin.charbonnier@axiocode.com"
+    }],
     "keywords" : [
         "authentication shf bundle"
     ],
@@ -8,7 +17,7 @@
         "MIT"
     ],
     "require" : {
-        "besimple/sso-auth-bundle": "master-dev",
+        "besimple/sso-auth-bundle": "master-dev"
     },
     "autoload" : {
         "psr-4" : {

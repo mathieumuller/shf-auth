@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Security\User;
+namespace Shf\AuthBundle\Security\User;
 
 use AppBundle\Entity\Compte;
 use AppBundle\Entity\Groupe;

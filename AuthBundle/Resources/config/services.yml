@@ -1,10 +1,10 @@
 parameters:    
-    security.authentication_failure_handler.class: "AuthBundle\\Handler\\FailureHandler"
-    shf.auth.configurator.class: "AuthBundle\\Service\\Configurator"
-    shf.security_handler.class: "AuthBundle\\Service\\SecurityHandler"
-    shf.password_encoder.class: "AuthBundle\\Security\\Encoder\\SHFPasswordEncoder"
-    shf.user_provider.class: "AuthBundle\\Security\\User\\UserProvider"
-    shf.security.authentication_success_handler.class: "AuthBundle\\Handler\\AuthenticationSuccessHandler"
+    security.authentication_failure_handler.class: "Shf\\AuthBundle\\Handler\\FailureHandler"
+    shf.auth.configurator.class: "Shf\\AuthBundle\\Service\\Configurator"
+    shf.security_handler.class: "Shf\\AuthBundle\\Service\\SecurityHandler"
+    shf.password_encoder.class: "Shf\\AuthBundle\\Security\\Encoder\\SHFPasswordEncoder"
+    shf.user_provider.class: "Shf\\AuthBundle\\Security\\User\\UserProvider"
+    shf.security.authentication_success_handler.class: "Shf\\AuthBundle\\Handler\\AuthenticationSuccessHandler"
 
 services:
     security.authentication_failure_handler:

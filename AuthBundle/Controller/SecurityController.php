@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Controller;
+namespace Shf\AuthBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +31,7 @@ class SecurityController extends Controller
             $session->remove(SecurityContext::AUTHENTICATION_ERROR);
         }
 
-        return $this->render('AuthBundle:security:login.html.twig', [
+        return $this->render('ShfAuthBundle:security:login.html.twig', [
             // last username entered by the user
             'cas_login_url' => $this->get('shf.auth.configurator')->get('cas_login_url'),
             'last_username' => $session->get(SecurityContext::LAST_USERNAME),

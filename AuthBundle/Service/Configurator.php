@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Service;
+namespace Shf\AuthBundle\Service;
 
 class Configurator
 {

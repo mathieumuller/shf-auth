@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Security\Encoder;
+namespace Shf\AuthBundle\Security\Encoder;
 
 use Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder;
 

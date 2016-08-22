@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Handler;
+namespace Shf\AuthBundle\Handler;
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;

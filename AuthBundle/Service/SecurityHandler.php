@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Service;
+namespace Shf\AuthBundle\Service;
 
 use Symfony\Component\Security\Core\Encoder\EncoderFactory;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;

@@ -1,6 +1,6 @@
 <?php
 
-namespace AuthBundle\Handler;
+namespace Shf\AuthBundle\Handler;
 
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -9,8 +9,8 @@ use Symfony\Component\Security\Http\Logout\LogoutSuccessHandlerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\RouterInterface;
 use Doctrine\ORM\EntityManager;
-use AuthBundle\Security\User\UserProvider;
-use AuthBundle\Service\Configurator;
+use Shf\AuthBundle\Security\User\UserProvider;
+use Shf\AuthBundle\Service\Configurator;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
